@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form - ParvatCool</title>
+
+  <style>
+    * {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    }
+
+    a {
+      font-size: 20px;
+      padding: 10px;
+      margin: 10px;
+      font-size: 17px;
+      color: rgb(8, 20, 112);
+      font-weight: bold;
+      background-color: rgb(247, 247, 59);
+      border-radius: 50px;
+      text-decoration: none;
+
+    }
+
+    #linking:link {
+      color: rgb(116, 14, 14);
+    }
+
+
+    #linking:visited {
+      color: rgb(8, 20, 112);
+
+    }
+
+
+    #linking:hover {
+      color: yellow;
+      background-color: rgb(25, 38, 222);
+    }
+
+    #linking:active {
+      color: rgb(255, 0, 0);
+    }
+
+    body {
+      background-image: url('D://tcsc/parvatcool/waterfall.png');
+      background-repeat: no-repeat;
+      background-size: 100% 930px;
+      background-color: rgba(0, 0, 0, 1);
+    }
+
+    #logo {
+      margin-left: 80px;
+      width: 170px
+    }
+
+    #start {
+      color: rgb(222, 18, 18);
+      font-weight: 700;
+      text-align: justify;
+    }
+
+    #header {
+      display: flex;
+      background-color: white;
+      padding: 20px;
+
+      margin-left: -2px;
+      position: fixed;
+      width: 100%;
+      height: 76px;
+      box-shadow: 1px 2px 4px 2px rgba(194, 184, 194, 1);
+    }
+
+    @media screen and (min-width: 992px) {
+
+      nav {
+        float: right
+      }
+     .baricon{
+      display: none;
+     }
+      #entry{
+          margin-top: 50px;
+      }
+
+      #logo {
+        margin-left: 80px;
+        width: 170px;
+        height: 34px
+      }
+
+      #space {
+        width: 37.7%;
+      }
+
+      #bar {
+        display: none;
+      }
+
+      #list {
+        margin-top: 3px;
+      }
+
+    }
+
+
+    @media screen and (max-width: 991px) {
+
+      #logo {
+        height: 40px;
+      }
+
+      #header {
+        height: 150px;
+      }
+      
+      #list {
+        position: absolute;
+        margin-top: 35px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top:15%;
+        left: 0%;
+        right:0%;
+        height:400px;
+        width: 100%;
+        background-color: aqua;
+      }
+
+      .footer-logo {
+        margin-top: -100px;
+        margin-right: 400px;
+        width: 30%;
+      }
+
+      #site {
+        margin-top: 100px;
+      }
+
+    }
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", Arial, Helvetica, sans-serif;
+    }
+
+    form {
+      width: 100%;
+    }
+
+    .form_elements {
+      margin-bottom: 15px;
+    }
+
+    .formbold-pt-3 {
+      padding-top: 12px;
+    }
+
+    .form_section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .sub_form_body {
+      margin: 0 auto;
+      max-width: 550px;
+      width: 100%;
+      background: white;
+      padding: 50px;
+    }
+
+    .labels {
+      display: block;
+      font-weight: 500;
+      font-size: 16px;
+      color: #07074d;
+      margin-bottom: 12px;
+    }
+
+    .labels-2 {
+      font-weight: 600;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .user_input {
+      width: 100%;
+      padding: 12px 24px;
+      border-radius: 6px;
+      border: 1px solid #e0e0e0;
+      background: white;
+      font-weight: 500;
+      font-size: 16px;
+      color: #6b7280;
+      outline: none;
+      resize: none;
+    }
+
+    .user_input:focus {
+      border-color: #6a64f1;
+      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .final_submit {
+      text-align: center;
+      font-size: 16px;
+      border-radius: 6px;
+      padding: 14px 32px;
+      border: none;
+      font-weight: 600;
+      background-color: #6a64f1;
+      color: white;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .final_submit:hover {
+      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .formbold--mx-3 {
+      margin-left: -12px;
+      margin-right: -12px;
+    }
+
+    .formbold-px-3 {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .flex-wrap {
+      flex-wrap: wrap;
+    }
+    .req{
+      color: red;
+    }
+    .w-full {
+      width: 100%;
+    }
+
+    @media (min-width: 540px) {
+      .sm\:w-half {
+        width: 50%;
+      }
+    }
+  </style>
+
+  <script src="scripting.js"></script>
+</head>
+
+<body class="form" id="form" contenteditable="false">
+
+  <div id="header">
+
+    <img src="D:\tcsc\parvatcool\Logo.png" id="logo">
+
+     
+    <div id="space"> </div>
+    <button class="baricon" onclick="navlist()">MENU =</button>
+    <nav id="list">
+
+      <a href="parvatcool.html" id="linking" class="linking">HOME</a>
+      <a href="product.html" id="linking" class="linking">PRODUCTS </a>
+      <a href="alive-is-awesome.html" id="linking" class="linking">ABOUT US</a>
+      <a href="inspired-us.html" id="linking" class="linking">BLOGS</a>
+      <a href="form.html" id="linking" class="linking" style="color:yellow; background-color: blue;">CONTACT US</a>
+
+    </nav>
+ 
+  </div><br>
+
+  <div class="form_section" id="entry">
+    <div class="sub_form_body">
+      <form name="contact_form" method="POST" action="insert.php">
+        <center><h1>CONTACT US</h1><br><font color="red"><b class="req">* ALL FIELDS ARE MANDATORY</b></font></center><br> 
+        <div class="form_elements">
+          <label for="name" class="labels"><b class="req">*</b> Full Name </label>
+          <input type="text" name="txtfullname" id="name" placeholder="Full Name" maxlength="35" class="user_input" required>
+        </div>
+        <div class="form_elements">
+          <label for="phone" class="labels"><b class="req">*</b> Phone Number </label>
+          <input type="text" name="txtphone" maxlength="10" id="phone" placeholder="Enter your phone number"
+            class="user_input" required >
+        </div>
+        <div class="form_elements">
+          <label for="email" class="labels" maxlength="25"><b class="req">*</b> Email Address </label>
+          <input type="email" name="txtemail" id="email" placeholder="Enter your email" class="user_input" required >
+        </div>
+        <div class="form_elements">
+          <label class="labels" for="address"><b class="req">*</b> Address Details</label>
+          <input type="text" name="txtaddress" maxlength="150" id="area" style="width: 100%;" placeholder="Enter Address"class="user_input" required>
+        </div>   <br>              
+        <button class="final_submit" onclick="data_entry()">Submit</button>
+      </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>

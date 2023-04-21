@@ -1,0 +1,391 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 17px;
+}
+#history {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 5s
+  }
+
+  @-webkit-keyframes animatebottom {
+    from {
+      bottom: -1000px;
+      opacity: 0
+    }
+
+    to {
+      bottom: 0px;
+      opacity: 1
+    }
+  }
+
+  @keyframes animatebottom {
+    from {
+      bottom: -700px;
+      opacity: 0
+    }
+
+    to {
+      bottom: 0;
+      opacity: 1
+    }
+  }
+
+html {
+    transition: color 300ms, background-color 300ms;
+}
+
+html[data-theme='dark'] {
+    background: #000;
+    filter: invert(1) hue-rotate(180deg)
+}
+
+html[data-theme='dark'] img {
+    filter: invert(1) hue-rotate(180deg);
+    z-index: 1;
+}
+
+html[data-theme='dark'] #site,
+#logo,
+#button-toggle {
+    filter: invert(0) hue-rotate(180deg);
+    z-index: -1;
+}
+
+
+.intro {
+    line-height: 30px;
+    margin-right: 10px;
+}
+
+h1 {
+    background-color: rgb(49, 84, 200);
+    color: rgb(255, 255, 255);
+    border-radius: 100px;
+    padding: 10px;
+    text-align: center;
+
+
+}
+
+#logo {
+    margin-left: 80px;
+    width: 170px
+}
+
+footer {
+    background-color: rgba(221, 222, 224, 0.799);
+}
+
+#toggle {
+    float: right;
+    font-size: 30px;
+}
+#card{
+    display: none;
+}
+
+#start {
+    color: rgb(222, 18, 18);
+    font-weight: 700;
+    text-align: justify;
+}
+
+#main_topic {
+    font-family: verdana;
+    font-weight: bolder
+}
+
+p {
+    font-size: 27px;
+    font-weight: 500;
+    padding: 30px;
+}
+
+span {
+    background-color: rgb(86, 164, 238);
+    border-radius: 40px;
+    font-size: 30px;
+    padding: 17px;
+    color: white;
+    font-weight: bold;
+}
+
+#menu {
+    border-radius: 10px;
+    width: 500px;
+}
+
+#history {
+    padding: 23px
+}
+
+#header {
+    display: flex;
+    background-color: white;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    box-shadow: 1px 2px 4px 2px rgba(194, 184, 194, 1);
+    z-index: 1;
+}
+
+#linking {
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 17px;
+    color: rgb(8, 20, 112);
+    font-weight: bold;
+    background-color: rgb(247, 247, 59);
+    border-radius: 100px;
+}
+
+#linking:link {
+    color: rgb(116, 14, 14);
+}
+
+
+#linking:visited {
+    color: rgb(8, 20, 112);
+
+}
+
+
+#linking:hover {
+    color: yellow;
+    background-color: rgb(25, 38, 222);
+}
+
+
+#linking:active {
+    color: rgb(255, 0, 0);
+}
+
+@media screen and (min-width: 992px) {
+
+    nav {
+        float: right
+    }
+
+    #logo {
+        margin-left: 80px;
+        width: 170px;
+        height: 34px
+    }
+    .baricon{
+        display: none;
+       }
+   
+    #bar{
+        display: none;
+    }
+
+    #space {
+        width: 38%
+    }
+
+    #bar {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 991px) {
+
+    #logo {
+        height: 40px;
+        float: left;
+    }
+
+    #header {
+        height: 150px;
+    }
+   
+    #list{
+        /*
+        position: absolute;
+        margin-top: 35px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top:15%;
+        left: 0%;
+        right:0%;
+        height:400px;
+        width: 100%;
+        background-color: aqua;
+        */
+        position: absolute;
+        margin-top: 40px;
+        line-height: 50px;
+    }
+   
+    #menu {
+        width: 100%
+    }
+
+    .footer-logo {
+        margin-top: -100px;
+        margin-right: 400px;
+        width: 30%;
+    }
+
+    #site {
+        margin-top: 100px;
+    }
+
+}
+ul{
+    margin-left: 30px;
+}
+#site,
+    h1,
+    .intro {
+      animation: fadeInAnimation ease 5s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes fadeInAnimation {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+b.title {
+    color: rgb(255, 0, 0);
+    font-size: 30px;
+    text-align: center;
+}
+
+div.section:nth-child(even){
+    margin-left: 300px;
+}
+
+b {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 22px;
+}
+
+#footer {
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+}
+
+.footer-logo {
+    background-color: white;
+    margin-bottom: -110px;
+    margin-left: 50px;
+}
+
+
+#product {
+    font-size: 20px;
+}
+
+#img {
+    padding-left: 0px;
+    margin-left: -15px;
+}
+
+.cast {
+    display: flex;
+}
+
+.casting {
+    padding: 5px;
+    margin: 7px;
+}
+
+b {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#contact {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+form {
+    border: 2px solid rgb(197, 197, 247);
+    line-height: 15px;
+    margin: 10px;
+    padding: 10px;
+    width: 400px;
+    border-radius: 10px;
+    background-image: none;
+
+    backdrop-filter: blur(100px) saturate(0%);
+    -webkit-backdrop-filter: blur(100px) saturate(0%);
+    background-color: rgba(17, 25, 40, 0.67);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    color: rgb(221, 247, 135);
+}
+
+.buy{
+    background-color: rgb(9, 69, 133);
+    color: white;
+    font-weight: bolder;
+    padding: 8px;
+    font-size: 15px;
+    margin: 7px;
+    border-radius: 100px;
+}
+
+label,
+input,
+textarea,
+p {
+    margin-left: 20px;
+}
+
+#detail {
+    text-align: left;
+    color: rgb(185, 249, 220);
+}
+
+input[type="submit"] {
+    background-color: rgb(245, 188, 82);
+}
+
+h2 {
+    color: rgb(121, 226, 242)
+}
+
+input {
+    width: 85%;
+    padding: 5px;
+}
+
+label {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.form {
+    background-image: url('D://tcsc/parvatcool/waterfall.png');
+    background-repeat: no-repeat;
+    background-size: 100% 930px;
+    background-color: rgba(0, 0, 0, 1);
+}

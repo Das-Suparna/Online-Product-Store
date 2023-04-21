@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form - ParvatCool</title>
+
+    <style>
+        *{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+ 
+    body{
+      display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+
+    }
+  form{
+    width: 100%;
+    
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+ 
+    box-shadow: 1px -17px 20px -20px rgba(0,0,0,0.45),
+19px -1px 20px -20px rgba(0,0,0,0.45),
+0px 19px 20px -20px rgba(0,0,0,0.45),
+-18px 6px 20px -20px rgba(0,0,0,0.45);
+  }
+  .form_fields {
+    margin-bottom: 15px;
+  }
+  .formbold-pt-3 {
+    padding-top: 12px;
+  }
+
+
+  .sub_section_form {
+    
+    
+    width: 100%;
+    background: white;
+    padding: 10px;
+  }
+  .name_label {
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    color: #07074d;
+    margin-bottom: 12px;
+  }
+  .name_label-2 {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .user_input {
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    background: white;
+    font-weight: 500;
+    font-size: 16px;
+    color: #6b7280;
+    outline: none;
+    width: 70%;
+  }
+
+  .user_input:focus {
+    border-color: #6a64f1;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  
+  .submit_form {
+    text-align: center;
+    font-size: 16px;
+    border-radius: 6px;
+    padding: 14px 32px;
+    border: none;
+    font-weight: 600;
+    background-color: #6a64f1;
+    color: white;
+    width: 20%;
+    cursor: pointer;
+  }
+  
+  .submit_button {
+    text-align: center;
+    font-size: 16px;
+    border-radius: 6px;
+    padding: 14px 32px;
+    border: none;
+    font-weight: 600;
+    background-color: #6a64f1;
+    color: white;
+    width: 10%;
+    cursor: pointer;
+  }
+  .form_number{
+     text-align: center;
+     display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+   
+  }
+
+.numform{
+    
+   
+    display: block;
+     padding: 20px;
+
+}
+.req{
+  color: red;
+}
+  @media (min-width: 540px) {
+    .sm\:w-half {
+      width: 50%;
+    }
+  }
+
+    </style>
+<script>
+   function d(){
+  var date = new Date();
+  var month = date.getMonth();
+  var day = date.getDate();
+
+  var year = date.getFullYear();
+
+  purchase_form.txtorder.value += (year+"-"+month+"-"+day);
+
+  var del = new Date() ;
+  del.setDate(del.getDate() + 2);
+  purchase_form.txtdeliver.value += (del.getFullYear()+"-"+del.getMonth()+"-"+del.getDate());
+      }
+</script>
+<script src="scripting.js"></script>
+
+</head>
+
+<body id="form"  onload="d()" align="center">
+
+    <div class="section_form" class="form">
+       <div class="sub_section_form">
+
+          <form name="purchase_form"  method="POST" action="cart.php" > <br>
+            <h1>PAYMENT GATEWAY</h1><font color="red"><b class="req">* ALL FIELDS ARE MANDATORY</b></font><br><br>         
+            <div class="form_fields">
+              
+              <label for="name" class="name_label"><b class="req">*</b> NAME </label>
+              <select name="products" id="products" class="user_input" onchange="myFunction(value);"  required>
+                <optgroup label="SOAPS" class="formbold-mb-5">
+                  <option selected>SELECT PRODUCT</option>
+                  <option value="PARVATCOOL ORIGINAL" >PARVATCOOL ORIGINAL</option>
+                  <option value="PARVATCOOL LIME" >PARVATCOOL LIME</option>
+                  <option value="PARVATCOOL COOL" >PARVATCOOL COOL</option>
+                  <option value="PARVATCOOL HEALTH+" >PARVATCOOL HEALTH+</option>
+                </optgroup>
+                <optgroup label="DEODARANT" class="formbold-mb-5">
+                  <option value="INTENSE Deostick" >INTENSE Deostick</option>
+                  <option value="PARVATCOOL ENERGY" >PARVATCOOL ENERGY</option>
+                  <option value="PARVATCOOL BODY FRAGNANCE" >PARVATCOOL BODY FRAGNANCE</option>
+                </optgroup>
+                <optgroup label="TALC" class="formbold-mb-5">
+                    <option value="TALC ORIGINAL" >TALC ORIGINAL</option>
+                    <option value="TALC LIME" >TALC LIME</option>
+                    <option value="TALC COOL"  >TALC COOL</option>
+                  </optgroup>
+              </select>
+            </div>   
+            <center>       
+            <div class="form_fields" class="sec">
+              <div class="form_number">
+                <div class="numform">
+                 <label for="price" class="name_label"> PRICE </label>
+              <input  type="text"  name="txtprice"  size="2px" placeholder="0"  class="user_input" required/>
+                  </div>         
+              <div class="numform">
+              <label for="quantity" class="name_label"><b class="req">*</b> QUANTITY </label>
+              <input  type="text" onchange="purchase_form.txtamt.value = parseInt(purchase_form.txtprice.value*purchase_form.txtquan.value)" name="txtquan"  size="2px" placeholder="0"  class="user_input" required/>
+               </div>          
+              <div class="numform">
+                <label for="amount" class="name_label"> TOTAL&nbsp;AMOUNT</label>
+                <input type="text" name="txtamt" size="2px" placeholder="0" class="user_input" required/>  
+              </div>
+              </div>
+            </div>
+            </center>
+
+
+            <div class="form_fields">
+              <label for="payment" class="name_label"><b class="req">*</b> MODE OF PAYMENT </label>
+             
+              <select name="cardname" id="products" class="user_input" onchange="showDiv(this)">
+                
+                  <option selected>SELECT MODE</option>
+                  <option value="1">CREDIT CARD</option>
+                  <option value="1">DEBIT CARD</option>
+                  <option value="0">GOOGLE PAY</option>
+                  <option value="0">PHONE PAY</option>
+                  <option value="0">RUPAY</option>
+                
+              </select><br><br>
+              <div class="form_fields"  id="card">
+                <label for="card" class="name_label"><b class="req">*</b> CARD NUMBER </label>
+                <input  type="number"  name="txtcard"  placeholder="Enter your CARD number"  class="user_input" required/>         
+              </div>
+            </div>
+            <div class="sub_section">
+              <div class="customer_data">
+                <div class="fields">
+                  <label for="name" class="name_label"><b class="req">*</b> CUSTOMER NAME </label>
+                  <input type="text" name="txtcust_name" id="name" placeholder="Full Name" class="user_input">
+                 
+                   
+                </div>
+
+                <div class="fields"><br>
+                  <label for="address" class="name_label"><b class="req">*</b> SHIPPING ADDRESS </label>
+                  <input type="text" name="txtaddress" id="name" placeholder="Shipping Address" class="user_input">
+                 
+                   
+                </div>
+              </div>
+           
+
+
+              <div class="form_fields"><br>
+                <label for="phone" class="name_label"><b class="req">*</b> PHONE NUMBER </label>
+                <input  type="number"  name="txtcontact"  id="phone"  placeholder="Enter your phone number"  class="user_input" required/>
+          
+              </div>
+              <div class="form_number" >
+                <div class="numform">
+                <label for="date" class="name_label"><b class="req">*</b> ORDER DATE </label>
+                <input type="text" name="txtorder" id="email" size="20px" class="user_input" required/>
+                </div>
+                <div class="numform">
+                <label for="date" class="name_label"><b class="req">*</b> DELIVER DATE </label>
+                <input type="text" name="txtdeliver" id="email" size="20px" placeholder="DD-MM-YYYY"  class="user_input" required/>
+                </div>
+              </div>
+            </div>     
+            <div>
+              <button class="submit_form">Submit</button>
+            </div><br><br>
+          </form>
+        </div>
+      </div>
+      
+
+
+    
+</body>
+
+</html>
