@@ -1,4 +1,4 @@
-#PARVATCOOL COOL
+<h1>PARVATCOOL COOL</h1>
 
 ParvatCool website have been designed for ParvatCool Enterprise Private LTD.<br>
 ParvatCool Enterprise is a manufacturing company which deals with manufacturing of different types of Soaps, Deodorants and Talcum powder.<br>
